@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure html, body, and the root div take full viewport height and width */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  /* Using a modern sans-serif font, similar to Inter */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+/* Styles for the main container, acting as a flex parent for two columns */
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem; /* Padding around the entire main content */
+  display: flex; /* Enables flexbox layout */
+  gap: 1rem; /* Space between flex items (left and right sections) */
+}
+
+/* Base styles for both the left and right sections */
+.left,
+.right {
+  height: 100%; /* Take full height of the main container */
+  flex: 1; /* Allows both to grow and shrink, taking equal space */
+  border-radius: 0.75rem; /* Rounded corners (equivalent to Tailwind's rounded-xl) */
+}
+
+/* Specific background color for the left section */
+.left {
+  max-width: 50%;
+  padding: 1rem;
+  overflow: auto;             /* Enables scrolling if content overflows */
+  white-space: pre-wrap;      /* Wraps long text lines */
+  word-break: break-word;     /* Breaks long words */
+  background-color: #1e1e1e;  /* Darker background to suit code */
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Fira Code', monospace;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.left .code,
+          .code pre,
+          .code pre code {
+              height: 100%;
+              width: 100%;
+              margin: 0;
+              border-radius: 0.7rem;
+              background-color: ; /* Ensure black background for code */
+          }
+
+
+
+/* Styles for the 'review' element, positioned absolutely within the 'left' section */
+.review {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end; /* Keeps button aligned to the left */
+  transition: background-color 0.2s;
+}
+
+.review:hover {
+  background-color: #0056b3;
+}
+
+
+/* Specific background color for the right section */
+.right {
+  max-width: 50%; /* or any width you want */
+  padding: 1rem;
+  overflow: auto;        /* Enables scrolling if content overflows */
+  white-space: pre-wrap; /* Wraps long text */
+  word-break: break-word; /* Breaks long words if needed */
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  color: #333;
+  font-family: sans-serif;
+}
+
